@@ -1,0 +1,3 @@
+acmebscene_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: AcmebsceneBundle:Default:index }
