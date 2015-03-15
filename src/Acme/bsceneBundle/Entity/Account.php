@@ -10,13 +10,14 @@
 namespace Acme\bsceneBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="Account")
  */
 
-class Account
+class Account implements UserInterface
 {
 
     /**
@@ -33,7 +34,7 @@ class Account
     protected $username;
 
     /**
-     * @ORM\Column(type="string", length=30)
+     * @ORM\Column(type="string", length=255)
      */
     protected $password;
     
@@ -527,4 +528,17 @@ class Account
     {
         return $this->city;
     }
+
+    public function eraseCredentials() {
+        
+    }
+
+    public function getRoles() {
+        return null;
+    }
+
+    public function getSalt() {
+        return null;
+    }
+
 }
