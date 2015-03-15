@@ -46,5 +46,70 @@ class Status
         $this->accounts = new ArrayCollection();
     }
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Status
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Add accounts
+     *
+     * @param \Acme\bsceneBundle\Entity\Account $accounts
+     * @return Status
+     */
+    public function addAccount(\Acme\bsceneBundle\Entity\Account $accounts)
+    {
+        $this->accounts[] = $accounts;
+
+        return $this;
+    }
+
+    /**
+     * Remove accounts
+     *
+     * @param \Acme\bsceneBundle\Entity\Account $accounts
+     */
+    public function removeAccount(\Acme\bsceneBundle\Entity\Account $accounts)
+    {
+        $this->accounts->removeElement($accounts);
+    }
+
+    /**
+     * Get accounts
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getAccounts()
+    {
+        return $this->accounts;
+    }
+}
