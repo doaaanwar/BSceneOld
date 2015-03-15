@@ -9,19 +9,15 @@
 //src/bsceneBundle/Entity/Account.php
 namespace Acme\bsceneBundle\Entity;
 
-
-
 use Doctrine\ORM\Mapping as ORM;
-use Acme\StoreBundle\Entity\Status;
-use Acme\StoreBundle\Entity\Cities;
-
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="Account")
  */
 
-class Account
+class Account implements UserInterface
 {
 
     /**
@@ -38,7 +34,7 @@ class Account
     protected $username;
 
     /**
-     * @ORM\Column(type="string", length=30)
+     * @ORM\Column(type="string", length=255)
      */
     protected $password;
     
@@ -509,4 +505,40 @@ class Account
     {
         return $this->status;
     }
+
+    /**
+     * Set city
+     *
+     * @param \Acme\bsceneBundle\Entity\Cities $city
+     * @return Account
+     */
+    public function setCity(\Acme\bsceneBundle\Entity\Cities $city = null)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return \Acme\bsceneBundle\Entity\Cities 
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    public function eraseCredentials() {
+        
+    }
+
+    public function getRoles() {
+        return null;
+    }
+
+    public function getSalt() {
+        return null;
+    }
+
 }
