@@ -68,7 +68,7 @@ class __TwigTemplate_99fad7b7026aaa2fdc5705d17ce1f3da19a3201977c515e056b60fc308a
             </div>
             <a href=\"http://symfony.com/doc/";
         // line 19
-        echo twig_escape_filter($this->env, (isset($context["version"]) ? $context["version"] : $this->getContext($context, "version")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getContext($context, "version"), "html", null, true);
         echo "/quick_tour/index.html\" class=\"sf-button sf-button-selected\">
                 <span class=\"border-l\">
                     <span class=\"border-r\">
@@ -79,7 +79,7 @@ class __TwigTemplate_99fad7b7026aaa2fdc5705d17ce1f3da19a3201977c515e056b60fc308a
         </div>
         ";
         // line 27
-        if (($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "environment", array()) == "dev")) {
+        if (($this->getAttribute($this->getContext($context, "app"), "environment", array()) == "dev")) {
             // line 28
             echo "            <div class=\"block-configure\">
                 <div class=\"illustration\">
@@ -128,23 +128,23 @@ class __TwigTemplate_99fad7b7026aaa2fdc5705d17ce1f3da19a3201977c515e056b60fc308a
                 <li><strong>Documentation</strong></li>
                 <li><a href=\"http://symfony.com/doc/";
         // line 59
-        echo twig_escape_filter($this->env, (isset($context["version"]) ? $context["version"] : $this->getContext($context, "version")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getContext($context, "version"), "html", null, true);
         echo "/book/index.html\">The Book</a></li>
                 <li><a href=\"http://symfony.com/doc/";
         // line 60
-        echo twig_escape_filter($this->env, (isset($context["version"]) ? $context["version"] : $this->getContext($context, "version")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getContext($context, "version"), "html", null, true);
         echo "/cookbook/index.html\">The Cookbook</a></li>
                 <li><a href=\"http://symfony.com/doc/";
         // line 61
-        echo twig_escape_filter($this->env, (isset($context["version"]) ? $context["version"] : $this->getContext($context, "version")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getContext($context, "version"), "html", null, true);
         echo "/components/index.html\">The Components</a></li>
                 <li><a href=\"http://symfony.com/doc/";
         // line 62
-        echo twig_escape_filter($this->env, (isset($context["version"]) ? $context["version"] : $this->getContext($context, "version")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getContext($context, "version"), "html", null, true);
         echo "/reference/index.html\">Reference</a></li>
                 <li><a href=\"http://symfony.com/doc/";
         // line 63
-        echo twig_escape_filter($this->env, (isset($context["version"]) ? $context["version"] : $this->getContext($context, "version")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getContext($context, "version"), "html", null, true);
         echo "/glossary.html\">Glossary</a></li>
             </ul>
         </div>
@@ -163,7 +163,7 @@ class __TwigTemplate_99fad7b7026aaa2fdc5705d17ce1f3da19a3201977c515e056b60fc308a
                 <li><a href=\"http://forum.symfony-project.org\">Forum</a></li>
                 <li><a href=\"http://symfony.com/doc/";
         // line 79
-        echo twig_escape_filter($this->env, (isset($context["version"]) ? $context["version"] : $this->getContext($context, "version")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getContext($context, "version"), "html", null, true);
         echo "/contributing/index.html\">Contributing</a></li>
             </ul>
         </div>

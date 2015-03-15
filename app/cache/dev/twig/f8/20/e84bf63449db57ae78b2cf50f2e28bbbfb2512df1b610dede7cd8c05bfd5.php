@@ -1,6 +1,6 @@
 <?php
 
-/* @WebProfiler/Collector/memory.html.twig */
+/* WebProfilerBundle:Collector:memory.html.twig */
 class __TwigTemplate_f820e84bf63449db57ae78b2cf50f2e28bbbfb2512df1b610dede7cd8c05bfd5 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -43,7 +43,7 @@ class __TwigTemplate_f820e84bf63449db57ae78b2cf50f2e28bbbfb2512df1b610dede7cd8c0
             <img width=\"13\" height=\"28\" alt=\"Memory Usage\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAcBAMAAABITyhxAAAAJ1BMVEXNzc3///////////////////////8/Pz////////////+NjY0/Pz9lMO+OAAAADHRSTlMAABAgMDhAWXCvv9e8JUuyAAAAQ0lEQVQI12MQBAMBBmLpMwoMDAw6BxjOOABpHyCdAKRzsNDp5eXl1KBh5oHBAYY9YHoDQ+cqIFjZwGCaBgSpBrjcCwCZgkUHKKvX+wAAAABJRU5ErkJggg==\" />
             <span>";
         // line 7
-        echo twig_escape_filter($this->env, sprintf("%.1f", (($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "memory", array()) / 1024) / 1024)), "html", null, true);
+        echo twig_escape_filter($this->env, sprintf("%.1f", (($this->getAttribute($this->getContext($context, "collector"), "memory", array()) / 1024) / 1024)), "html", null, true);
         echo " MB</span>
         </span>
     ";
@@ -56,9 +56,9 @@ class __TwigTemplate_f820e84bf63449db57ae78b2cf50f2e28bbbfb2512df1b610dede7cd8c0
             <b>Memory usage</b>
             <span>";
         // line 13
-        echo twig_escape_filter($this->env, sprintf("%.1f", (($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "memory", array()) / 1024) / 1024)), "html", null, true);
+        echo twig_escape_filter($this->env, sprintf("%.1f", (($this->getAttribute($this->getContext($context, "collector"), "memory", array()) / 1024) / 1024)), "html", null, true);
         echo " / ";
-        echo ((($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "memoryLimit", array()) ==  -1)) ? ("&infin;") : (twig_escape_filter($this->env, sprintf("%.1f", (($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "memoryLimit", array()) / 1024) / 1024)))));
+        echo ((($this->getAttribute($this->getContext($context, "collector"), "memoryLimit", array()) ==  -1)) ? ("&infin;") : (twig_escape_filter($this->env, sprintf("%.1f", (($this->getAttribute($this->getContext($context, "collector"), "memoryLimit", array()) / 1024) / 1024)))));
         echo " MB</span>
         </div>
     ";
@@ -70,7 +70,7 @@ class __TwigTemplate_f820e84bf63449db57ae78b2cf50f2e28bbbfb2512df1b610dede7cd8c0
 
     public function getTemplateName()
     {
-        return "@WebProfiler/Collector/memory.html.twig";
+        return "WebProfilerBundle:Collector:memory.html.twig";
     }
 
     public function isTraitable()

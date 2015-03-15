@@ -1,0 +1,131 @@
+<?php
+
+/* 
+ * Account.php
+ * The entity for the account object
+ * Revision History:
+ *      13.03.2015: created, doaa elfayoumi
+ */
+//src/bsceneBundle/Entity/Account.php
+namespace Acme\bsceneBundle\Entity;
+
+
+
+use Doctrine\ORM\Mapping as ORM;
+use Acme\StoreBundle\Entity\Status;
+
+
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="Account")
+ */
+
+class Account
+{
+
+    /**
+     * @ORM\Column(type="integer", length=10, unique=true)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $username;
+
+    /**
+     * @ORM\Column(type="string", length=30)
+     */
+    protected $password;
+    
+    
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    protected $firstName;
+    
+    
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    protected $lastName;
+  
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $email;
+    
+    
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    protected $backupEmail;
+    
+    
+    /**
+     * @ORM\Column(type="string", length=15, nullable=true)
+     */
+    protected $businessPhone;
+    
+    
+    
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    protected $url;
+    
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    protected $address1;
+    
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    protected $address2;
+    
+    
+    /**
+     * @ORM\Column(type="string", length=5, nullable=true)
+     */
+    protected $province;
+    
+    
+    /**
+     * @ORM\Column(type="float", length=10)
+     */
+    protected $paymentAmount;
+    
+    
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    protected $memberSince;
+    
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="Status", inversedBy="accounts")
+     * @ORM\JoinColumn(name="statusId", referencedColumnName="id")
+    */
+    protected $status;
+    
+    
+    /**
+    * @ORM\Column(type="boolean")
+    */
+    protected $isAdmin = 0;
+    
+    
+    /**
+    * @ORM\Column(type="datetime")
+    */
+    protected $lastLogin;
+
+    
+}
+
+

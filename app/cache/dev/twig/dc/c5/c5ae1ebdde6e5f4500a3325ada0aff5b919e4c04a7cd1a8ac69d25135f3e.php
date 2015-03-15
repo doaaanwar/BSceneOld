@@ -1,6 +1,6 @@
 <?php
 
-/* @WebProfiler/Profiler/toolbar.css.twig */
+/* WebProfilerBundle:Profiler:toolbar.css.twig */
 class __TwigTemplate_dcc5c5ae1ebdde6e5f4500a3325ada0aff5b919e4c04a7cd1a8ac69d25135f3e extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -365,7 +365,7 @@ class __TwigTemplate_dcc5c5ae1ebdde6e5f4500a3325ada0aff5b919e4c04a7cd1a8ac69d251
 /***** Override the setting when the toolbar is on the top *****/
 ";
         // line 348
-        if (((isset($context["position"]) ? $context["position"] : $this->getContext($context, "position")) == "top")) {
+        if (($this->getContext($context, "position") == "top")) {
             // line 349
             echo "    .sf-minitoolbar {
         top: 0;
@@ -412,7 +412,7 @@ class __TwigTemplate_dcc5c5ae1ebdde6e5f4500a3325ada0aff5b919e4c04a7cd1a8ac69d251
         echo "
 ";
         // line 390
-        if ( !(isset($context["floatable"]) ? $context["floatable"] : $this->getContext($context, "floatable"))) {
+        if ( !$this->getContext($context, "floatable")) {
             // line 391
             echo "    .sf-toolbarreset {
         position: static;
@@ -475,7 +475,7 @@ class __TwigTemplate_dcc5c5ae1ebdde6e5f4500a3325ada0aff5b919e4c04a7cd1a8ac69d251
 
     public function getTemplateName()
     {
-        return "@WebProfiler/Profiler/toolbar.css.twig";
+        return "WebProfilerBundle:Profiler:toolbar.css.twig";
     }
 
     public function isTraitable()
