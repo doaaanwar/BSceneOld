@@ -35,6 +35,11 @@ class Cities
      * @ORM\OneToMany(targetEntity="Venue", mappedBy="city")
      */
     protected $venues;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Account", mappedBy="city")
+     */
+    protected $accounts;
 
     /**
      * Get id

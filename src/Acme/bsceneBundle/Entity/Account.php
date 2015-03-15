@@ -9,12 +9,7 @@
 //src/bsceneBundle/Entity/Account.php
 namespace Acme\bsceneBundle\Entity;
 
-
-
 use Doctrine\ORM\Mapping as ORM;
-use Acme\StoreBundle\Entity\Status;
-
-
 
 /**
  * @ORM\Entity
@@ -88,6 +83,11 @@ class Account
      */
     protected $address2;
     
+    /**
+     * @ORM\ManyToOne(targetEntity="Cities", inversedBy="accounts")
+     * @ORM\JoinColumn(name="citiesId", referencedColumnName="id")
+    */
+    protected $city;
     
     /**
      * @ORM\Column(type="string", length=5, nullable=true)
@@ -503,5 +503,28 @@ class Account
     public function getStatus()
     {
         return $this->status;
+    }
+
+    /**
+     * Set city
+     *
+     * @param \Acme\bsceneBundle\Entity\Cities $city
+     * @return Account
+     */
+    public function setCity(\Acme\bsceneBundle\Entity\Cities $city = null)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return \Acme\bsceneBundle\Entity\Cities 
+     */
+    public function getCity()
+    {
+        return $this->city;
     }
 }

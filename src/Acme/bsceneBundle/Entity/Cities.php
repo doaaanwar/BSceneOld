@@ -35,6 +35,11 @@ class Cities
      * @ORM\OneToMany(targetEntity="Venue", mappedBy="city")
      */
     protected $venues;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Account", mappedBy="city")
+     */
+    protected $accounts;
 
     /**
      * Get id
@@ -108,5 +113,38 @@ class Cities
     public function getVenues()
     {
         return $this->venues;
+    }
+
+    /**
+     * Add accounts
+     *
+     * @param \Acme\bsceneBundle\Entity\Account $accounts
+     * @return Cities
+     */
+    public function addAccount(\Acme\bsceneBundle\Entity\Account $accounts)
+    {
+        $this->accounts[] = $accounts;
+
+        return $this;
+    }
+
+    /**
+     * Remove accounts
+     *
+     * @param \Acme\bsceneBundle\Entity\Account $accounts
+     */
+    public function removeAccount(\Acme\bsceneBundle\Entity\Account $accounts)
+    {
+        $this->accounts->removeElement($accounts);
+    }
+
+    /**
+     * Get accounts
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getAccounts()
+    {
+        return $this->accounts;
     }
 }

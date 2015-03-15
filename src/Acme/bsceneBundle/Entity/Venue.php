@@ -9,7 +9,7 @@
 namespace Acme\bsceneBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Acme\StoreBundle\Entity\Cities;
+
 
 /**
  * Venue
@@ -60,7 +60,7 @@ class Venue
     protected $longitude;
     
     /**
-     * @ORM\ManyToOne(targetEntity="City", inversedBy="venue")
+     * @ORM\ManyToOne(targetEntity="Cities", inversedBy="$venues")
      * @ORM\JoinColumn(name="citiesId", referencedColumnName="id")
      */
     protected $city;
