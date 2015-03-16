@@ -1,4 +1,12 @@
 <?php
+/* 
+ * Organization.php
+ * The entity for the Organization object
+ * Revision History:
+ *      15.03.2015: created, Victoria Betts
+ */
+//src/bsceneBundle/Entity/Organization.php
+
 
 namespace Acme\bsceneBundle\Entity;
 

@@ -1,5 +1,14 @@
 <?php
 
+/* 
+ * Categories.php
+ * The entity for the Categories object
+ * Revision History:
+ *      15.03.2015: created, Victoria Betts
+ */
+//src/bsceneBundle/Entity/Categories.php
+
+
 namespace Acme\bsceneBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -32,7 +41,7 @@ class Categories
     protected $description;
     /**
      *
-     * @ORM\Column(type="int", length=2)
+     * @ORM\Column(type="integer", length=2)
      */
     protected $ranking;
     
@@ -99,26 +108,28 @@ class Categories
         return $this->description;
     }
 
+   
+
     /**
-     * Set ranking
+     * Set meetupCategory
      *
-     * @param \int $ranking
+     * @param \Acme\bsceneBundle\Entity\MeetupCategories $meetupCategory
      * @return Categories
      */
-    public function setRanking(\int $ranking)
+    public function setMeetupCategory(\Acme\bsceneBundle\Entity\MeetupCategories $meetupCategory = null)
     {
-        $this->ranking = $ranking;
+        $this->meetupCategory = $meetupCategory;
 
         return $this;
     }
 
     /**
-     * Get ranking
+     * Get meetupCategory
      *
-     * @return \int 
+     * @return \Acme\bsceneBundle\Entity\MeetupCategories 
      */
-    public function getRanking()
+    public function getMeetupCategory()
     {
-        return $this->ranking;
+        return $this->meetupCategory;
     }
 }

@@ -41,7 +41,7 @@ class Categories
     protected $description;
     /**
      *
-     * @ORM\Column(type="int", length=2)
+     * @ORM\Column(type="integer", length=2)
      */
     protected $ranking;
     
@@ -108,28 +108,7 @@ class Categories
         return $this->description;
     }
 
-    /**
-     * Set ranking
-     *
-     * @param \int $ranking
-     * @return Categories
-     */
-    public function setRanking(\int $ranking)
-    {
-        $this->ranking = $ranking;
-
-        return $this;
-    }
-
-    /**
-     * Get ranking
-     *
-     * @return \int 
-     */
-    public function getRanking()
-    {
-        return $this->ranking;
-    }
+   
 
     /**
      * Set meetupCategory
@@ -152,5 +131,28 @@ class Categories
     public function getMeetupCategory()
     {
         return $this->meetupCategory;
+    }
+
+    /**
+     * Set ranking
+     *
+     * @param integer $ranking
+     * @return Categories
+     */
+    public function setRanking($ranking)
+    {
+        $this->ranking = $ranking;
+
+        return $this;
+    }
+
+    /**
+     * Get ranking
+     *
+     * @return integer 
+     */
+    public function getRanking()
+    {
+        return $this->ranking;
     }
 }
