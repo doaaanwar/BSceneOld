@@ -542,11 +542,11 @@ class Account implements UserInterface
     public function getRoles() {
        if($this->isAdmin)
        {
-           return 'ROLE_ADMIN';
+           return array('ROLE_ADMIN');
        }
        else
        {
-           return 'ROLE_USER';
+           return array('ROLE_USER');
        }
     }
 
