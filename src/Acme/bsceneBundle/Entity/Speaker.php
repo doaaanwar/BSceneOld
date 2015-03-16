@@ -1,12 +1,12 @@
 <?php
 
 /* 
- * Image.php
- * The entity for the Image object
+ * Speaker.php
+ * The entity for the Speaker object
  * Revision History:
  *      16.03.2015: created, Mahmoud Jallala
  */
-//src/bsceneBundle/Entity/Image.php
+//src/bsceneBundle/Entity/Speaker.php
 
 namespace Acme\bsceneBundle\Entity;
 
@@ -16,12 +16,12 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="Image")
+ * @ORM\Table(name="Speaker")
  */
-class Image
+class Speaker
 {
      /**
-     * @ORM\Column(type="integer", length=5,  unique=true)
+     * @ORM\Column(type="integer", length=5, unique=true)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
@@ -31,11 +31,17 @@ class Image
     /**
      * @ORM\Column(type="string", length=100)
      */
-    protected $logoURL;
+    protected $name;
     
     
     /**
      * @ORM\Column(type="string", length=100)
      */
-    protected $logoName;
+    protected $title;
+    
+    
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    protected $biography;
 }
