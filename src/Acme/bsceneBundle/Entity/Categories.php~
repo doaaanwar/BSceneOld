@@ -132,4 +132,27 @@ class Categories
     {
         return $this->meetupCategory;
     }
+
+    /**
+     * Set ranking
+     *
+     * @param integer $ranking
+     * @return Categories
+     */
+    public function setRanking($ranking)
+    {
+        $this->ranking = $ranking;
+
+        return $this;
+    }
+
+    /**
+     * Get ranking
+     *
+     * @return integer 
+     */
+    public function getRanking()
+    {
+        return $this->ranking;
+    }
 }

@@ -95,6 +95,12 @@ class Account implements UserInterface
      */
     protected $province;
     
+    /**
+     * @ORM\ManyToOne(targetEntity="Organization", inversedBy="accounts")
+     * @ORM\JoinColumn(name="organizationId", referencedColumnName="id")
+    */
+    protected $organization;
+    
     
     /**
      * @ORM\Column(type="float", length=10)
@@ -541,4 +547,27 @@ class Account implements UserInterface
         return null;
     }
 
+
+    /**
+     * Set organization
+     *
+     * @param \Acme\bsceneBundle\Entity\Organization $organization
+     * @return Account
+     */
+    public function setOrganization(\Acme\bsceneBundle\Entity\Organization $organization = null)
+    {
+        $this->organization = $organization;
+
+        return $this;
+    }
+
+    /**
+     * Get organization
+     *
+     * @return \Acme\bsceneBundle\Entity\Organization 
+     */
+    public function getOrganization()
+    {
+        return $this->organization;
+    }
 }

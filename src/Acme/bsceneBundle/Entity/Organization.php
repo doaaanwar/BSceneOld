@@ -40,6 +40,12 @@ class Organization
      * @ORM\Column(type="string", length=255)
      */
     protected $website;
+    
+    
+     /**
+     * @ORM\OneToMany(targetEntity="Account", mappedBy="organization")
+     */
+    protected $accounts;
 
 
     /**
@@ -96,5 +102,45 @@ class Organization
     public function getWebsite()
     {
         return $this->website;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->accounts = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add accounts
+     *
+     * @param \Acme\bsceneBundle\Entity\Account $accounts
+     * @return Organization
+     */
+    public function addAccount(\Acme\bsceneBundle\Entity\Account $accounts)
+    {
+        $this->accounts[] = $accounts;
+
+        return $this;
+    }
+
+    /**
+     * Remove accounts
+     *
+     * @param \Acme\bsceneBundle\Entity\Account $accounts
+     */
+    public function removeAccount(\Acme\bsceneBundle\Entity\Account $accounts)
+    {
+        $this->accounts->removeElement($accounts);
+    }
+
+    /**
+     * Get accounts
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getAccounts()
+    {
+        return $this->accounts;
     }
 }

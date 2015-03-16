@@ -40,6 +40,12 @@ class Organization
      * @ORM\Column(type="string", length=255)
      */
     protected $website;
+    
+    
+     /**
+     * @ORM\OneToMany(targetEntity="Account", mappedBy="organization")
+     */
+    protected $accounts;
 
 
     /**
