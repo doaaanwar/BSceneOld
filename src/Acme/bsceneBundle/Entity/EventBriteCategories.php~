@@ -1,0 +1,47 @@
+<?php
+
+/* 
+ * EventBriteCategories.php
+ * The entity for the EventBriteCategories object
+ * Revision History:
+ *      15.03.2015: created, Doaa elfayoumi
+ */
+//src/bsceneBundle/Entity/MeetupCategories.php
+
+
+namespace Acme\bsceneBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * EventBriteCategories
+ *
+ * @ORM\Table(name="EventBriteCategories")
+ * @ORM\Entity
+ */
+class EventBriteCategories
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+    
+    /**
+     *
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $name;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Categories", mappedBy="eventBriteCategory")
+     */
+    protected $category;
+
+
+}
+
+

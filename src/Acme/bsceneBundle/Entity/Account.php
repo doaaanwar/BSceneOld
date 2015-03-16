@@ -5,6 +5,8 @@
  * The entity for the account object
  * Revision History:
  *      13.03.2015: created, doaa elfayoumi
+ *      15.03.2015: implement userInterface, doaa elfayoumi
+ *      15.03.2015: add organization and cities, doaa elfayoumi
  */
 //src/bsceneBundle/Entity/Account.php
 namespace Acme\bsceneBundle\Entity;

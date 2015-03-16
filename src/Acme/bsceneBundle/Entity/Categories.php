@@ -53,6 +53,13 @@ class Categories
 
 
     /**
+     * @ORM\ManyToOne(targetEntity="EventBriteCategories", inversedBy="$category")
+     * @ORM\JoinColumn(name="eventBriteCategoryId", referencedColumnName="id")
+     */
+    protected $eventBriteCategory;
+    
+    
+    /**
      * Get id
      *
      * @return integer 
@@ -154,5 +161,28 @@ class Categories
     public function getRanking()
     {
         return $this->ranking;
+    }
+
+    /**
+     * Set eventBriteCategory
+     *
+     * @param \Acme\bsceneBundle\Entity\EventBriteCategories $eventBriteCategory
+     * @return Categories
+     */
+    public function setEventBriteCategory(\Acme\bsceneBundle\Entity\EventBriteCategories $eventBriteCategory = null)
+    {
+        $this->eventBriteCategory = $eventBriteCategory;
+
+        return $this;
+    }
+
+    /**
+     * Get eventBriteCategory
+     *
+     * @return \Acme\bsceneBundle\Entity\EventBriteCategories 
+     */
+    public function getEventBriteCategory()
+    {
+        return $this->eventBriteCategory;
     }
 }

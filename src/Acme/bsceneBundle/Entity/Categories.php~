@@ -53,6 +53,13 @@ class Categories
 
 
     /**
+     * @ORM\ManyToOne(targetEntity="EventBriteCategories", inversedBy="$category")
+     * @ORM\JoinColumn(name="eventBriteCategoryId", referencedColumnName="id")
+     */
+    protected $eventBriteCategory;
+    
+    
+    /**
      * Get id
      *
      * @return integer 
