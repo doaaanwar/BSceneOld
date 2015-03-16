@@ -540,7 +540,14 @@ class Account implements UserInterface
     }
 
     public function getRoles() {
-        return null;
+       if($this->isAdmin)
+       {
+           return 'ROLE_ADMIN';
+       }
+       else
+       {
+           return 'ROLE_USER';
+       }
     }
 
     public function getSalt() {
