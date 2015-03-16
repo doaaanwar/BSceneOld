@@ -31,11 +31,11 @@ class Image
     /**
      * @ORM\Column(type="string", length=100)
      */
-    protected $logoURL;
+    protected $URL;
     
     
     /**
      * @ORM\Column(type="string", length=100)
      */
-    protected $logoName;
+    protected $Name;
 }
