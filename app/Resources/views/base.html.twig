@@ -41,12 +41,13 @@
                         <form class="navbar-form navbar-left" role="search">
                             <div class="form-group">
                                 <input class="form-control" type="text" />
-                            </div> <button type="button" class="btn btn-default" onclick="'#'">Search</button>
+                            </div> 
+                            <button type="button" class="btn btn-default" onclick="'#'">Search</button>
                         </form>
                         <ul class="nav navbar-nav navbar-right">
 
                             <li>
-                                <a class="login-window" href="#">Login</a>
+                                <a class="login-window" href="#login-box">Login</a>
                             </li>
                             <li>
                                 <a href="#">Sign up</a>
@@ -58,12 +59,69 @@
                 </div>
                 <!-- /.container -->
             </nav>
-        {% endblock %}
 
-        {% block javascripts %}
-            <script src="{{ asset('bundles/acmebscene/js/jquery.js')}}"></script>
-            <!-- Bootstrap Core JavaScript -->
-            <script src="{{ asset('bundles/acmebscene/js/bootstrap.min.js')}}"></script>
+
+            {% block javascripts %}
+                <script src="{{ asset('bundles/acmebscene/js/jquery.js')}}"></script>
+                <!-- Bootstrap Core JavaScript -->
+                <script src="{{ asset('bundles/acmebscene/js/bootstrap.min.js')}}"></script>
+
+                <div id="login-box" class="login-popup">
+                    <script type="text/javascript">
+                                $(document).ready(function () {
+                                    $('a.login-window').click(function () {
+
+                                        //Getting the variable's value from a link 
+                                        var loginBox = $(this).attr('href');
+
+                                        //Fade in the Popup
+                                        $(loginBox).fadeIn(300);
+
+                                        //Set the center alignment padding + border see css style
+                                        var popMargTop = ($(loginBox).height() + 24) / 2;
+                                        var popMargLeft = ($(loginBox).width() + 24) / 2;
+
+                                        $(loginBox).css({
+                                            'margin-top': -popMargTop,
+                                            'margin-left': -popMargLeft
+                                        });
+
+                                        // Add the mask to body
+                                        $('body').append('<div id="mask"></div>');
+                                        $('#mask').fadeIn(300);
+
+                                        return false;
+                                    });
+
+                                    // When clicking on the button close or the mask layer the popup closed
+                                    $('a.close, #mask').on('click', function () {
+                                        $('#mask , .login-popup').fadeOut(300, function () {
+                                            $('#mask').remove();
+                                        });
+                                        return false;
+                                    });
+                                });
+                    </script>
+                {% endblock %}
+                <a href="#" class="close"><img src="{{ asset('bundles/acmebscene/images/close_pop.png')}}" class="btn_close" title="Close Window" alt="Close" /></a>
+                <form  class="signin" >
+                    <fieldset class="textbox">
+                        <label class="username">
+                            <span>Username or email</span>
+                            <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Username">
+                        </label>
+                        <label class="password">
+                            <span>Password</span>
+                            <input id="password" name="password" value="" type="password" placeholder="Password">
+                        </label>
+                        <button class="button" type="button" onclick="location.href = 'indexAfterLogin.html'">Sign in</button>
+                        <p>
+                            <a class="forgot" href="forgetPassword.html">Forgot your password?</a>
+                        </p>        
+                    </fieldset>
+                </form>
+            </div>
+
         {% endblock %}
     </body>
 </html>
