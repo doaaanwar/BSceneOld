@@ -36,7 +36,7 @@ class __TwigTemplate_8989ceee06b5e9e8e96064a0f408b8b2864f79d824f64f58885bf2bfb94
 <pre>";
         // line 13
         $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getContext($context, "exception"), "toarray", array()));
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["exception"]) ? $context["exception"] : $this->getContext($context, "exception")), "toarray", array()));
         foreach ($context['_seq'] as $context["i"] => $context["e"]) {
             // line 14
             echo "[";

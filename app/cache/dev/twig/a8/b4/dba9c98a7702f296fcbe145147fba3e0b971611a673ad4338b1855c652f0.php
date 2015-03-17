@@ -49,11 +49,11 @@ class __TwigTemplate_a8b4dba9c98a7702f296fcbe145147fba3e0b971611a673ad4338b1855c
     {
         // line 8
         echo "    ";
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "exception"), "message", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["exception"]) ? $context["exception"] : $this->getContext($context, "exception")), "message", array()), "html", null, true);
         echo " (";
-        echo twig_escape_filter($this->env, $this->getContext($context, "status_code"), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["status_code"]) ? $context["status_code"] : $this->getContext($context, "status_code")), "html", null, true);
         echo " ";
-        echo twig_escape_filter($this->env, $this->getContext($context, "status_text"), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["status_text"]) ? $context["status_text"] : $this->getContext($context, "status_text")), "html", null, true);
         echo ")
 ";
     }
