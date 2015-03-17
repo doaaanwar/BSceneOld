@@ -1,6 +1,6 @@
 <?php
 
-/* WebProfilerBundle:Profiler:base_js.html.twig */
+/* @WebProfiler/Profiler/base_js.html.twig */
 class __TwigTemplate_b40e6a4b858c0c0e37603055564a4615f9040ce25317f55b8b3ebc465166db1f extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -201,7 +201,7 @@ class __TwigTemplate_b40e6a4b858c0c0e37603055564a4615f9040ce25317f55b8b3ebc46516
                 /* prevent logging AJAX calls to static and inline files, like templates */
                 if (url.substr(0, 1) === '/' && !url.match(new RegExp(\"";
             // line 181
-            echo twig_escape_filter($this->env, $this->getContext($context, "excluded_ajax_paths"), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["excluded_ajax_paths"]) ? $context["excluded_ajax_paths"] : $this->getContext($context, "excluded_ajax_paths")), "html", null, true);
             echo "\"))) {
                     var stackElement = {
                         loading: true,
@@ -293,7 +293,7 @@ class __TwigTemplate_b40e6a4b858c0c0e37603055564a4615f9040ce25317f55b8b3ebc46516
 
     public function getTemplateName()
     {
-        return "WebProfilerBundle:Profiler:base_js.html.twig";
+        return "@WebProfiler/Profiler/base_js.html.twig";
     }
 
     public function isTraitable()

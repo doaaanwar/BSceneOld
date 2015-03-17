@@ -1,6 +1,6 @@
 <?php
 
-/* WebProfilerBundle:Profiler:toolbar_js.html.twig */
+/* @WebProfiler/Profiler/toolbar_js.html.twig */
 class __TwigTemplate_04776a698050a9bd6e71494e3e3674066b486ea180dddb07d536464b99ec4e2e extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -17,7 +17,7 @@ class __TwigTemplate_04776a698050a9bd6e71494e3e3674066b486ea180dddb07d536464b99e
     {
         // line 1
         echo "<div id=\"sfwdt";
-        echo twig_escape_filter($this->env, $this->getContext($context, "token"), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token")), "html", null, true);
         echo "\" class=\"sf-toolbar\" style=\"display: none\"></div>
 ";
         // line 2
@@ -27,10 +27,10 @@ class __TwigTemplate_04776a698050a9bd6e71494e3e3674066b486ea180dddb07d536464b99e
     (function () {
         ";
         // line 5
-        if (("top" == $this->getContext($context, "position"))) {
+        if (("top" == (isset($context["position"]) ? $context["position"] : $this->getContext($context, "position")))) {
             // line 6
             echo "            var sfwdt = document.getElementById('sfwdt";
-            echo twig_escape_filter($this->env, $this->getContext($context, "token"), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token")), "html", null, true);
             echo "');
             document.body.insertBefore(
                 document.body.removeChild(sfwdt),
@@ -43,11 +43,11 @@ class __TwigTemplate_04776a698050a9bd6e71494e3e3674066b486ea180dddb07d536464b99e
         Sfjs.load(
             'sfwdt";
         // line 14
-        echo twig_escape_filter($this->env, $this->getContext($context, "token"), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token")), "html", null, true);
         echo "',
             '";
         // line 15
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_wdt", array("token" => $this->getContext($context, "token"))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_wdt", array("token" => (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token")))), "html", null, true);
         echo "',
             function(xhr, el) {
                 el.style.display = -1 !== xhr.responseText.indexOf('sf-toolbarreset') ? 'block' : 'none';
@@ -59,28 +59,28 @@ class __TwigTemplate_04776a698050a9bd6e71494e3e3674066b486ea180dddb07d536464b99e
                 if (Sfjs.getPreference('toolbar/displayState') == 'none') {
                     document.getElementById('sfToolbarMainContent-";
         // line 24
-        echo twig_escape_filter($this->env, $this->getContext($context, "token"), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token")), "html", null, true);
         echo "').style.display = 'none';
                     document.getElementById('sfToolbarClearer-";
         // line 25
-        echo twig_escape_filter($this->env, $this->getContext($context, "token"), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token")), "html", null, true);
         echo "').style.display = 'none';
                     document.getElementById('sfMiniToolbar-";
         // line 26
-        echo twig_escape_filter($this->env, $this->getContext($context, "token"), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token")), "html", null, true);
         echo "').style.display = 'block';
                 } else {
                     document.getElementById('sfToolbarMainContent-";
         // line 28
-        echo twig_escape_filter($this->env, $this->getContext($context, "token"), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token")), "html", null, true);
         echo "').style.display = 'block';
                     document.getElementById('sfToolbarClearer-";
         // line 29
-        echo twig_escape_filter($this->env, $this->getContext($context, "token"), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token")), "html", null, true);
         echo "').style.display = 'block';
                     document.getElementById('sfMiniToolbar-";
         // line 30
-        echo twig_escape_filter($this->env, $this->getContext($context, "token"), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token")), "html", null, true);
         echo "').style.display = 'none';
                 }
 
@@ -114,7 +114,7 @@ class __TwigTemplate_04776a698050a9bd6e71494e3e3674066b486ea180dddb07d536464b99e
                 if (xhr.status !== 0) {
                     confirm('An error occurred while loading the web debug toolbar (' + xhr.status + ': ' + xhr.statusText + ').\\n\\nDo you want to open the profiler?') && (window.location = '";
         // line 61
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_profiler", array("token" => $this->getContext($context, "token"))), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_profiler", array("token" => (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token")))), "html", null, true);
         echo "');
                 }
             },
@@ -127,7 +127,7 @@ class __TwigTemplate_04776a698050a9bd6e71494e3e3674066b486ea180dddb07d536464b99e
 
     public function getTemplateName()
     {
-        return "WebProfilerBundle:Profiler:toolbar_js.html.twig";
+        return "@WebProfiler/Profiler/toolbar_js.html.twig";
     }
 
     public function isTraitable()

@@ -1,6 +1,6 @@
 <?php
 
-/* DebugBundle:Profiler:dump.html.twig */
+/* @Debug/Profiler/dump.html.twig */
 class __TwigTemplate_d3e453662e425dc605899455c83c728a8c71891b49e989aa63ec25863323b02f extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -39,12 +39,12 @@ class __TwigTemplate_d3e453662e425dc605899455c83c728a8c71891b49e989aa63ec2586332
     {
         // line 4
         echo "    ";
-        $context["dumps_count"] = $this->getAttribute($this->getContext($context, "collector"), "dumpsCount", array());
+        $context["dumps_count"] = $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "dumpsCount", array());
         // line 5
         echo "
     ";
         // line 6
-        if ($this->getContext($context, "dumps_count")) {
+        if ((isset($context["dumps_count"]) ? $context["dumps_count"] : $this->getContext($context, "dumps_count"))) {
             // line 7
             echo "        ";
             ob_start();
@@ -52,7 +52,7 @@ class __TwigTemplate_d3e453662e425dc605899455c83c728a8c71891b49e989aa63ec2586332
             echo "            <img alt=\"dump()\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAcCAYAAACOGPReAAACcUlEQVRIx+1UPUwUYRB97+Pc8ychMSaE4E+BrYWVgCd7e5dYQSxoiIFEjYWVdNiJiVjaSGFhowUkhsLEH2Jhcvsd54nYaQ0USoAYG7WBvWOfhd+R87zFC40N00z2zTdv30xmBti3/2ZBECy3+pZJgXw+f0rSiKQBkt2SOkluSFoh+SqKoplyufylJdIgCNIAJgGMkUzXcEkAEJM0DtqUNAVgwlq7Vc9hGtR1ACiSHCeZlvQGwFClUjkKYAVAexzHFyXNAkiTvEXSury/lTqFRZI9kr4DuGKtfV6L53K5tTAMu+reZwDMkuwC8F5SUFNcr3TSEf4g6dcTuvIP139ba8vGmD5JawB6Adz9o/xMJnMSwJhLvhGG4acm/T/UCBQKhc9xHA8DAMkxx/Ob1PO8UdfDD8Vi8WnCQAw1A+fn599KegbgoOd5Izukkgbc354kjZi1di4pJumx84M7pCRPO/DdXhaD5ILz3QDAXC4XATiQ8H48DMP7jWA2mx00xrxMUB3Rjcs6gE5JZ621H/ewwsdIfgOwHoZhV22klpz883spX1Kf80v1czrnwKtJidlsdnCXnl6r5zEAUK1WpwFskjwXBMFws8SkHvq+f4HkEIDN7e3tmR3SUqm06o4DADzyff9MK2X39/efMMbU5vpBqVRabVzTCUmLJNvb2tpKu5XrFPamUqkFksfd7t9pevry+XxHHMcvSPa4Hr+W9LBarVrP836mUqkjlUqlF8B1kpcBUNKiMeZSoVD4+q97eg/Azdo9lRSTNDXvsC0AUwBuN97TXS9/HMejAAbcpnQC2JC0THIuiqLppMvfsrnN27d/2y+hkCBqr75LOwAAAABJRU5ErkJggg==\" />
             <span class=\"sf-toolbar-status sf-toolbar-status-yellow\">";
             // line 9
-            echo twig_escape_filter($this->env, $this->getContext($context, "dumps_count"), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["dumps_count"]) ? $context["dumps_count"] : $this->getContext($context, "dumps_count")), "html", null, true);
             echo "</span>
         ";
             $context["icon"] = ('' === $tmp = ob_get_clean()) ? '' : new Twig_Markup($tmp, $this->env->getCharset());
@@ -68,7 +68,7 @@ class __TwigTemplate_d3e453662e425dc605899455c83c728a8c71891b49e989aa63ec2586332
             ";
             // line 16
             $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getContext($context, "collector"), "getDumps", array(0 => "html"), "method"));
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "getDumps", array(0 => "html"), "method"));
             foreach ($context['_seq'] as $context["_key"] => $context["dump"]) {
                 // line 17
                 echo "                <div class=\"sf-toolbar-info-piece\">
@@ -81,10 +81,10 @@ class __TwigTemplate_d3e453662e425dc605899455c83c728a8c71891b49e989aa63ec2586332
                     $context["link"] = $this->env->getExtension('code')->getFileLink($this->getAttribute($context["dump"], "file", array()), $this->getAttribute($context["dump"], "line", array()));
                     // line 21
                     echo "                        ";
-                    if ($this->getContext($context, "link")) {
+                    if ((isset($context["link"]) ? $context["link"] : $this->getContext($context, "link"))) {
                         // line 22
                         echo "                            <a href=\"";
-                        echo twig_escape_filter($this->env, $this->getContext($context, "link"), "html", null, true);
+                        echo twig_escape_filter($this->env, (isset($context["link"]) ? $context["link"] : $this->getContext($context, "link")), "html", null, true);
                         echo "\" title=\"";
                         echo twig_escape_filter($this->env, $this->getAttribute($context["dump"], "file", array()), "html", null, true);
                         echo "\">";
@@ -155,7 +155,7 @@ class __TwigTemplate_d3e453662e425dc605899455c83c728a8c71891b49e989aa63ec2586332
         <span class=\"count\">
             <span>";
         // line 49
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "collector"), "dumpsCount", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "dumpsCount", array()), "html", null, true);
         echo "</span>
         </span>
     </span>
@@ -185,13 +185,13 @@ class __TwigTemplate_d3e453662e425dc605899455c83c728a8c71891b49e989aa63ec2586332
 
     ";
         // line 72
-        if ($this->getAttribute($this->getContext($context, "collector"), "dumpsCount", array())) {
+        if ($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "dumpsCount", array())) {
             // line 73
             echo "        <ul class=\"alt\">
             ";
             // line 74
             $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getContext($context, "collector"), "getDumps", array(0 => "html"), "method"));
+            $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "getDumps", array(0 => "html"), "method"));
             foreach ($context['_seq'] as $context["_key"] => $context["dump"]) {
                 // line 75
                 echo "            <li class=\"sf-dump sf-reset\">
@@ -204,10 +204,10 @@ class __TwigTemplate_d3e453662e425dc605899455c83c728a8c71891b49e989aa63ec2586332
                     $context["link"] = $this->env->getExtension('code')->getFileLink($this->getAttribute($context["dump"], "file", array()), $this->getAttribute($context["dump"], "line", array()));
                     // line 79
                     echo "                    ";
-                    if ($this->getContext($context, "link")) {
+                    if ((isset($context["link"]) ? $context["link"] : $this->getContext($context, "link"))) {
                         // line 80
                         echo "                        <a href=\"";
-                        echo twig_escape_filter($this->env, $this->getContext($context, "link"), "html", null, true);
+                        echo twig_escape_filter($this->env, (isset($context["link"]) ? $context["link"] : $this->getContext($context, "link")), "html", null, true);
                         echo "\" title=\"";
                         echo twig_escape_filter($this->env, $this->getAttribute($context["dump"], "file", array()), "html", null, true);
                         echo "\">";
@@ -272,7 +272,7 @@ class __TwigTemplate_d3e453662e425dc605899455c83c728a8c71891b49e989aa63ec2586332
 
     public function getTemplateName()
     {
-        return "DebugBundle:Profiler:dump.html.twig";
+        return "@Debug/Profiler/dump.html.twig";
     }
 
     public function isTraitable()
