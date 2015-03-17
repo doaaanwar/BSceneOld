@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 83d304,::1,GET,http://localhost/symfony/web/app_dev.php/,1424669774,
 0c2a82,::1,GET,http://localhost/BScene/web/app_dev.php/,1426294267,
 69e590,::1,GET,http://localhost/BScene/web/app_dev.php/hello/doaa,1426294274,
@@ -13,3 +14,8 @@ bd2591,::1,GET,http://localhost/BScene/web/app_dev.php/hello/team,1426471677,
 d501ac,::1,GET,http://localhost/BScene/web/app_dev.php/hello/team,1426471688,
 18c4f1,::1,GET,http://localhost/BScene/web/app_dev.php/hello/team,1426476285,
 809086,::1,GET,http://localhost/BScene/web/app_dev.php/hello/team,1426523551,
+=======
+9fe03e,::1,GET,http://localhost/BScene/web/app_dev.php/hello/team,1426523667,
+89ebb0,::1,GET,http://localhost/BScene/web/app_dev.php/hello/team,1426539117,
+06333a,::1,GET,http://localhost/BScene/web/app_dev.php/hello/team,1426550692,
+>>>>>>> 3fafaf9f19df277848c2c3c309d84fd75d9d071e
