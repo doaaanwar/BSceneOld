@@ -33,7 +33,7 @@ class __TwigTemplate_c148f170a109b3e5e99556d1317904d8b5f76e6c64620e67840ab09168a
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 11
         echo "        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("favicon.ico"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmebscene/favicon.ico"), "html", null, true);
         echo "\" />
     </head>
     <body>
@@ -63,12 +63,12 @@ class __TwigTemplate_c148f170a109b3e5e99556d1317904d8b5f76e6c64620e67840ab09168a
         echo "\t
             <link href=\"";
         // line 7
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("css/bootstrap.min.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmebscene/css/bootstrap.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
             <!-- Custom CSS -->
             <link href=\"";
         // line 9
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("css/bscene.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmebscene/css/bscene.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
         ";
     }
@@ -131,12 +131,12 @@ class __TwigTemplate_c148f170a109b3e5e99556d1317904d8b5f76e6c64620e67840ab09168a
     {
         // line 64
         echo "            <script src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmebscene/js/jquery.js"), "html", null, true);
         echo "\"></script>
             <!-- Bootstrap Core JavaScript -->
             <script src=\"";
         // line 66
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/acmebscene/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
         ";
     }
