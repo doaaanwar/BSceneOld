@@ -17,7 +17,7 @@ class __TwigTemplate_57e76cebaaf04a0ddeb3898422dd1cbd197113642c563f1ff909cac574e
     {
         // line 1
         echo "Hello ";
-        echo twig_escape_filter($this->env, $this->getContext($context, "name"), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["name"]) ? $context["name"] : $this->getContext($context, "name")), "html", null, true);
         echo "!
 ";
     }

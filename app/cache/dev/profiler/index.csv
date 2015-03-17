@@ -19,3 +19,7 @@ d501ac,::1,GET,http://localhost/BScene/web/app_dev.php/hello/team,1426471688,
 89ebb0,::1,GET,http://localhost/BScene/web/app_dev.php/hello/team,1426539117,
 06333a,::1,GET,http://localhost/BScene/web/app_dev.php/hello/team,1426550692,
 >>>>>>> 3fafaf9f19df277848c2c3c309d84fd75d9d071e
+6858e2,::1,GET,http://localhost/BScene/web/app_dev.php/hello/doaa,1426556481,
+0dde71,::1,GET,http://localhost/BScene/web/app_dev.php/hello/doaa,1426556832,
+d279a4,::1,GET,http://localhost/BScene/web/app_dev.php/hello/team,1426556839,
+3845e1,127.0.0.1,GET,http://localhost/BScene/web/app_dev.php/hello/doaa,1426558690,
