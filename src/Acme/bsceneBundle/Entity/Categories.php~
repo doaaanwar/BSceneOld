@@ -46,24 +46,28 @@ class Categories
     protected $ranking;
     
      /**
-     * @ORM\OneToOne(targetEntity="Image", inversedBy="$category")
+     * @ORM\OneToOne(targetEntity="Image", inversedBy="category")
      * @ORM\JoinColumn(name="imageId", referencedColumnName="id")
      */
     protected $image;
     
     /**
-     * @ORM\ManyToOne(targetEntity="MeetupCategories", inversedBy="$category")
+     * @ORM\ManyToOne(targetEntity="MeetupCategories", inversedBy="category")
      * @ORM\JoinColumn(name="meetupCategoryId", referencedColumnName="id")
      */
     protected $meetupCategory;
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="EventBriteCategories", inversedBy="$category")
+     * @ORM\ManyToOne(targetEntity="EventBriteCategories", inversedBy="category")
      * @ORM\JoinColumn(name="eventBriteCategoryId", referencedColumnName="id")
      */
     protected $eventBriteCategory;
     
+    /**
+    * @ORM\OneToMany(targetEntity="Event", mappedBy="category")
+    */
+    protected $events;
     
     /**
      * Get id
@@ -213,5 +217,45 @@ class Categories
     public function getImage()
     {
         return $this->image;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->events = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add events
+     *
+     * @param \Acme\bsceneBundle\Entity\Event $events
+     * @return Categories
+     */
+    public function addEvent(\Acme\bsceneBundle\Entity\Event $events)
+    {
+        $this->events[] = $events;
+
+        return $this;
+    }
+
+    /**
+     * Remove events
+     *
+     * @param \Acme\bsceneBundle\Entity\Event $events
+     */
+    public function removeEvent(\Acme\bsceneBundle\Entity\Event $events)
+    {
+        $this->events->removeElement($events);
+    }
+
+    /**
+     * Get events
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getEvents()
+    {
+        return $this->events;
     }
 }

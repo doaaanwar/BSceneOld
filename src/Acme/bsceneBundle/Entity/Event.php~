@@ -90,10 +90,10 @@ class Event
     protected $account;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Categories", inversedBy="event")
+     * @ORM\ManyToOne(targetEntity="Categories", inversedBy="events")
      * @ORM\JoinColumn(name="categoriesId", referencedColumnName="id")
     */
-    protected $Categories;
+    protected $category;
     
     
      /**
@@ -372,28 +372,6 @@ class Event
         return $this->account;
     }
 
-    /**
-     * Set Categories
-     *
-     * @param \Acme\bsceneBundle\Entity\Categories $categories
-     * @return Event
-     */
-    public function setCategories(\Acme\bsceneBundle\Entity\Categories $categories = null)
-    {
-        $this->Categories = $categories;
-    
-        return $this;
-    }
-
-    /**
-     * Get Categories
-     *
-     * @return \Acme\bsceneBundle\Entity\Categories 
-     */
-    public function getCategories()
-    {
-        return $this->Categories;
-    }
 
     /**
      * Add eventComments
@@ -426,5 +404,28 @@ class Event
     public function getEventComments()
     {
         return $this->eventComments;
+    }
+
+    /**
+     * Set category
+     *
+     * @param \Acme\bsceneBundle\Entity\Categories $category
+     * @return Event
+     */
+    public function setCategory(\Acme\bsceneBundle\Entity\Categories $category = null)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return \Acme\bsceneBundle\Entity\Categories 
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 }

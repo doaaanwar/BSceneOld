@@ -39,6 +39,11 @@ class Image
      */
     protected $Name;
     
+     /**
+     * @ORM\OneToOne(targetEntity="Event", mappedBy="image")
+     */
+    protected $event;
+    
 
     /**
      * Get id
@@ -97,4 +102,27 @@ class Image
     }
 
 
+
+    /**
+     * Set event
+     *
+     * @param \Acme\bsceneBundle\Entity\Event $event
+     * @return Image
+     */
+    public function setEvent(\Acme\bsceneBundle\Entity\Event $event = null)
+    {
+        $this->event = $event;
+
+        return $this;
+    }
+
+    /**
+     * Get event
+     *
+     * @return \Acme\bsceneBundle\Entity\Event 
+     */
+    public function getEvent()
+    {
+        return $this->event;
+    }
 }
