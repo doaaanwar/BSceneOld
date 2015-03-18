@@ -105,7 +105,7 @@ class Account implements UserInterface
     
     
     /**
-     * @ORM\Column(type="float", length=10)
+     * @ORM\Column(type="float", length=10,options={"default":0})
      */
     protected $paymentAmount;
     

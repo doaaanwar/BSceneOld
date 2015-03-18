@@ -51,7 +51,7 @@ class EventComments
     protected $email;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Event", inversedBy="EventComments")
+     * @ORM\ManyToOne(targetEntity="Event", inversedBy="eventComments")
      * @ORM\JoinColumn(name="eventId", referencedColumnName="id")
      */
     protected $event;
