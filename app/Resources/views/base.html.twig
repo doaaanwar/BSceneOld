@@ -3,15 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}B-Scene{% endblock %}</title>
-        {% block stylesheets %}	
+       
             <link href="{{ asset('bundles/acmebscene/css/bootstrap.min.css')}}" rel="stylesheet">
             <!-- Custom CSS -->
             <link href="{{ asset('bundles/acmebscene/css/bscene.css')}}" rel="stylesheet">
+        {% block stylesheets %}	
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}
+        
             <!-- Navigation -->
             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <div class="container">
@@ -55,17 +56,21 @@
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->
-
+                    {% block nav %}
+                    {% endblock %}
                 </div>
                 <!-- /.container -->
             </nav>
-
-
-            {% block javascripts %}
+            
+            
                 <script src="{{ asset('bundles/acmebscene/js/jquery.js')}}"></script>
                 <!-- Bootstrap Core JavaScript -->
                 <script src="{{ asset('bundles/acmebscene/js/bootstrap.min.js')}}"></script>
-
+                {% block javascripts %}
+                    
+                    
+                    
+                {% endblock %}
                 <div id="login-box" class="login-popup">
                     <script type="text/javascript">
                                 $(document).ready(function () {
@@ -102,7 +107,7 @@
                                     });
                                 });
                     </script>
-                {% endblock %}
+                
                 <a href="#" class="close"><img src="{{ asset('bundles/acmebscene/images/close_pop.png')}}" class="btn_close" title="Close Window" alt="Close" /></a>
                 <form  class="signin" method="POST" action="{{path('acmebscene_login')}}">
                     <fieldset class="textbox">
@@ -121,7 +126,33 @@
                     </fieldset>
                 </form>
             </div>
+             <!-- Page Content -->
+            <div class="container">
+                {% block header %}
+                       
+                 {% endblock %}
+                 
 
-        {% endblock %}
+                <div>
+                     {% block body %}
+                       
+                     {% endblock %}
+                </div>
+                
+                <!-- Footer -->
+                <footer>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>Copyright &copy; B-Scene 2015</p>
+                        </div>
+                    </div>
+                    {% block footer %}
+                       
+                    {% endblock %}
+                </footer>
+
+            </div>
+            
+        
     </body>
 </html>
