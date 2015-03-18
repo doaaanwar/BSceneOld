@@ -104,7 +104,7 @@
                     </script>
                 {% endblock %}
                 <a href="#" class="close"><img src="{{ asset('bundles/acmebscene/images/close_pop.png')}}" class="btn_close" title="Close Window" alt="Close" /></a>
-                <form  class="signin" >
+                <form  class="signin" method="POST" action="{{path('acmebscene_login')}}">
                     <fieldset class="textbox">
                         <label class="username">
                             <span>Username or email</span>
@@ -114,7 +114,7 @@
                             <span>Password</span>
                             <input id="password" name="password" value="" type="password" placeholder="Password">
                         </label>
-                        <button class="button" type="button" onclick="location.href = 'indexAfterLogin.html'">Sign in</button>
+                        <button class="button" type="submit">Sign in</button>
                         <p>
                             <a class="forgot" href="forgetPassword.html">Forgot your password?</a>
                         </p>        

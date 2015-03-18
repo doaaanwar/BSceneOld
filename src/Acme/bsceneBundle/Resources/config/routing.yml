@@ -1,3 +1,8 @@
 acmebscene_homepage:
     path:     /hello/{name}
     defaults: { _controller: AcmebsceneBundle:Default:index }
+
+
+acmebscene_login:
+    path:   ''
+    defaults: { _controller: AcmebsceneBundle:Default:login }
