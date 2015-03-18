@@ -84,7 +84,7 @@ class Event
     protected $image;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Account", inversedBy="event")
+     * @ORM\ManyToOne(targetEntity="Account", inversedBy="events")
      * @ORM\JoinColumn(name="accountId", referencedColumnName="id")
     */
     protected $account;

@@ -39,16 +39,62 @@ class Image
      */
     protected $Name;
     
-    /**
-     * @ORM\OneToOne(targetEntity="Categories", inversedBy="$image")
-     * @ORM\JoinColumn(name="categoriesId", referencedColumnName="id")
-     */
-    protected $categories;
-
 
     /**
-     * @ORM\OneToOne(targetEntity="Event", inversedBy="$image")
-     * @ORM\JoinColumn(name="eventId", referencedColumnName="id")
+     * Get id
+     *
+     * @return integer 
      */
-    protected $event;
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set URL
+     *
+     * @param string $uRL
+     * @return Image
+     */
+    public function setURL($uRL)
+    {
+        $this->URL = $uRL;
+    
+        return $this;
+    }
+
+    /**
+     * Get URL
+     *
+     * @return string 
+     */
+    public function getURL()
+    {
+        return $this->URL;
+    }
+
+    /**
+     * Set Name
+     *
+     * @param string $name
+     * @return Image
+     */
+    public function setName($name)
+    {
+        $this->Name = $name;
+    
+        return $this;
+    }
+
+    /**
+     * Get Name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->Name;
+    }
+
+
 }

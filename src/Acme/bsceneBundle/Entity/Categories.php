@@ -45,6 +45,12 @@ class Categories
      */
     protected $ranking;
     
+     /**
+     * @ORM\OneToOne(targetEntity="Image", inversedBy="$category")
+     * @ORM\JoinColumn(name="imageId", referencedColumnName="id")
+     */
+    protected $image;
+    
     /**
      * @ORM\ManyToOne(targetEntity="MeetupCategories", inversedBy="$category")
      * @ORM\JoinColumn(name="meetupCategoryId", referencedColumnName="id")
@@ -184,5 +190,28 @@ class Categories
     public function getEventBriteCategory()
     {
         return $this->eventBriteCategory;
+    }
+
+    /**
+     * Set image
+     *
+     * @param \Acme\bsceneBundle\Entity\Image $image
+     * @return Categories
+     */
+    public function setImage(\Acme\bsceneBundle\Entity\Image $image = null)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return \Acme\bsceneBundle\Entity\Image 
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 }

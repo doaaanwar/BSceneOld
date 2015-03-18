@@ -134,7 +134,10 @@ class Account implements UserInterface
     */
     protected $lastLogin;
 
-    
+     /**
+     * @ORM\OneToMany(targetEntity="Event", mappedBy="account")
+     */
+    protected $events;
 
     /**
      * Get id

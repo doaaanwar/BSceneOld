@@ -42,6 +42,77 @@ class EventBriteCategories
     protected $category;
 
 
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->category = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return EventBriteCategories
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Add category
+     *
+     * @param \Acme\bsceneBundle\Entity\Categories $category
+     * @return EventBriteCategories
+     */
+    public function addCategory(\Acme\bsceneBundle\Entity\Categories $category)
+    {
+        $this->category[] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Remove category
+     *
+     * @param \Acme\bsceneBundle\Entity\Categories $category
+     */
+    public function removeCategory(\Acme\bsceneBundle\Entity\Categories $category)
+    {
+        $this->category->removeElement($category);
+    }
+
+    /**
+     * Get category
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
 }
-
-

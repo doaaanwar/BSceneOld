@@ -39,18 +39,6 @@ class Image
      */
     protected $Name;
     
-    /**
-     * @ORM\OneToOne(targetEntity="Categories", inversedBy="$image")
-     * @ORM\JoinColumn(name="categoriesId", referencedColumnName="id")
-     */
-    protected $categories;
-
-
-    /**
-     * @ORM\OneToOne(targetEntity="Event", inversedBy="$image")
-     * @ORM\JoinColumn(name="eventId", referencedColumnName="id")
-     */
-    protected $event;
 
     /**
      * Get id
@@ -108,49 +96,5 @@ class Image
         return $this->Name;
     }
 
-    /**
-     * Set categories
-     *
-     * @param \Acme\bsceneBundle\Entity\Categories $categories
-     * @return Image
-     */
-    public function setCategories(\Acme\bsceneBundle\Entity\Categories $categories = null)
-    {
-        $this->categories = $categories;
-    
-        return $this;
-    }
 
-    /**
-     * Get categories
-     *
-     * @return \Acme\bsceneBundle\Entity\Categories 
-     */
-    public function getCategories()
-    {
-        return $this->categories;
-    }
-
-    /**
-     * Set event
-     *
-     * @param \Acme\bsceneBundle\Entity\Event $event
-     * @return Image
-     */
-    public function setEvent(\Acme\bsceneBundle\Entity\Event $event = null)
-    {
-        $this->event = $event;
-    
-        return $this;
-    }
-
-    /**
-     * Get event
-     *
-     * @return \Acme\bsceneBundle\Entity\Event 
-     */
-    public function getEvent()
-    {
-        return $this->event;
-    }
 }
