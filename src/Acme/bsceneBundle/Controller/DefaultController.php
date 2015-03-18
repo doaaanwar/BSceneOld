@@ -13,6 +13,11 @@ class DefaultController extends Controller
     }
     
     
+    public function adminIndexAction()
+    {
+        return $this->render('AcmebsceneBundle:Default:adminIndex.html.twig');
+    }
+    
      public function loginAction(Request $request)
     {
         
