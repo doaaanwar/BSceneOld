@@ -65,8 +65,8 @@ class Event
      */
     protected $capacity;
     
-        /**
-     * @ORM\ManyToOne(targetEntity="Venue", inversedBy="event")
+    /**
+     * @ORM\ManyToOne(targetEntity="Venue", inversedBy="events")
      * @ORM\JoinColumn(name="venueId", referencedColumnName="id")
     */
     protected $venue;

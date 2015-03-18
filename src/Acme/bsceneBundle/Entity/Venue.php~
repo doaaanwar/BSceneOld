@@ -66,6 +66,12 @@ class Venue
      * @ORM\JoinColumn(name="citiesId", referencedColumnName="id")
      */
     protected $city;
+    
+    
+     /**
+     * @ORM\OneToMany(targetEntity="Event", mappedBy="venue")
+     */
+    protected $events;
 
     /**
      * Get id

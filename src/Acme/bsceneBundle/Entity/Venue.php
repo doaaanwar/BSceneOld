@@ -66,6 +66,12 @@ class Venue
      * @ORM\JoinColumn(name="citiesId", referencedColumnName="id")
      */
     protected $city;
+    
+    
+     /**
+     * @ORM\OneToMany(targetEntity="Event", mappedBy="venue")
+     */
+    protected $events;
 
     /**
      * Get id
@@ -282,5 +288,45 @@ class Venue
     public function getCity()
     {
         return $this->city;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->events = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add events
+     *
+     * @param \Acme\bsceneBundle\Entity\Event $events
+     * @return Venue
+     */
+    public function addEvent(\Acme\bsceneBundle\Entity\Event $events)
+    {
+        $this->events[] = $events;
+
+        return $this;
+    }
+
+    /**
+     * Remove events
+     *
+     * @param \Acme\bsceneBundle\Entity\Event $events
+     */
+    public function removeEvent(\Acme\bsceneBundle\Entity\Event $events)
+    {
+        $this->events->removeElement($events);
+    }
+
+    /**
+     * Get events
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getEvents()
+    {
+        return $this->events;
     }
 }
