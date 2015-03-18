@@ -72,7 +72,7 @@ class Event
     protected $venue;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Organization", inversedBy="event")
+     * @ORM\ManyToOne(targetEntity="Organization", inversedBy="events")
      * @ORM\JoinColumn(name="organizationId", referencedColumnName="id")
     */
     protected $organization;

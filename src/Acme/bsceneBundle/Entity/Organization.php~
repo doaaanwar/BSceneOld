@@ -46,6 +46,11 @@ class Organization
      * @ORM\OneToMany(targetEntity="Account", mappedBy="organization")
      */
     protected $accounts;
+    
+     /**
+     * @ORM\OneToMany(targetEntity="Event", mappedBy="organization")
+     */
+    protected $events;
 
 
     /**

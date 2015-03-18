@@ -62,7 +62,7 @@ class Venue
     protected $longitude;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Cities", inversedBy="$venues")
+     * @ORM\ManyToOne(targetEntity="Cities", inversedBy="venues")
      * @ORM\JoinColumn(name="citiesId", referencedColumnName="id")
      */
     protected $city;

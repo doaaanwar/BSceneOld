@@ -46,6 +46,11 @@ class Organization
      * @ORM\OneToMany(targetEntity="Account", mappedBy="organization")
      */
     protected $accounts;
+    
+     /**
+     * @ORM\OneToMany(targetEntity="Event", mappedBy="organization")
+     */
+    protected $events;
 
 
     /**
@@ -142,5 +147,38 @@ class Organization
     public function getAccounts()
     {
         return $this->accounts;
+    }
+
+    /**
+     * Add events
+     *
+     * @param \Acme\bsceneBundle\Entity\Event $events
+     * @return Organization
+     */
+    public function addEvent(\Acme\bsceneBundle\Entity\Event $events)
+    {
+        $this->events[] = $events;
+
+        return $this;
+    }
+
+    /**
+     * Remove events
+     *
+     * @param \Acme\bsceneBundle\Entity\Event $events
+     */
+    public function removeEvent(\Acme\bsceneBundle\Entity\Event $events)
+    {
+        $this->events->removeElement($events);
+    }
+
+    /**
+     * Get events
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getEvents()
+    {
+        return $this->events;
     }
 }
