@@ -23,6 +23,8 @@
     <!-- Custom Fonts -->
     <link href="{{ asset('bundles/acmebscene/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
 
+    {% block stylesheets %}	
+    {% endblock %}
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -198,7 +200,8 @@
     <script src="{{ asset('bundles/acmebscene/js/plugins/morris/raphael.min.js')}}"></script>
     <script src="{{ asset('bundles/acmebscene/js/plugins/morris/morris.min.js')}}"></script>
     <script src="{{ asset('bundles/acmebscene/js/plugins/morris/morris-data.js')}}"></script>
-
+    {% block javascripts %}
+    {% endblock %}
 </body>
 
 </html>
