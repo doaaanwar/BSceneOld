@@ -13,14 +13,13 @@
      </header>               
 {% endblock %}
 {% block body %}
-{%if name is defined%}
+{%if errormessage is defined%}
 <div class="alert-info fade in">
-    <strong>Hello {{name}}</strong>
+    
+    <strong>{{errormessage}}</strong>
 </div>
 {%endif%}
-{% if app.session.get('admin') != null %}
-    <a href="...">Delete</a>
-{% endif %}
+
 {% endblock %}
 {% block javascripts %}
 {% endblock %}
