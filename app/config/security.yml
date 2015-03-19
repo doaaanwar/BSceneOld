@@ -53,6 +53,7 @@ security:
             logout:
                 path:   _demo_logout
                 target: _demo
+        
             #anonymous: ~
             #http_basic:
             #    realm: "Secured Demo Area"
@@ -64,3 +65,5 @@ security:
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
         - { path: ^/secure, roles: ROLE_ADMIN, requires_channel: https }
+        #doaa elfayoumi - adding the admin path
+        #- { path: ^/admin, roles: ROLE_ADMIN}

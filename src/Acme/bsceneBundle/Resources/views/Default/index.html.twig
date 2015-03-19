@@ -18,7 +18,9 @@
     <strong>Hello {{name}}</strong>
 </div>
 {%endif%}
-
+{% if app.session.get('admin') != null %}
+    <a href="...">Delete</a>
+{% endif %}
 {% endblock %}
 {% block javascripts %}
 {% endblock %}
