@@ -15,11 +15,37 @@ use Acme\bsceneBundle\Form\OrganizationType;
 class OrganizationController extends Controller
 {
 
+    
+    /*
+     * doaa el fayoumi -- added the new index for admin side
+     * function that get the list of organization and go to the organization list page
+     */
+    public function indexAction()
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $repository = $em->getRepository('\Acme\bsceneBundle\Entity\Organization');
+
+        
+        $organizationList = $repository->findAll();
+        if(count($organizationList) > 0)
+        {
+        
+            return $this->render('AcmebsceneBundle:Organization:organizationList.html.twig',array('orgList' => $organizationList));
+        }
+        else 
+        {
+            return $this->render('AcmebsceneBundle:Organization:organizationList.html.twig',array('orgList' => NULL,'errormessage' => "No organization list found"));
+
+        }
+    }
+    
+    
     /**
      * Lists all Organization entities.
      *
      */
-    public function indexAction()
+    //doaa elfayoumi - remove the generated index
+   /* public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -29,6 +55,8 @@ class OrganizationController extends Controller
             'entities' => $entities,
         ));
     }
+    */
+    
     /**
      * Creates a new Organization entity.
      *
