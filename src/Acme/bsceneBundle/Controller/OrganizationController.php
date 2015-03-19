@@ -32,11 +32,11 @@ class OrganizationController extends Controller
         if(count($organizationList) > 0)
         {
         
-            return $this->render('AcmebsceneBundle:Default:organizationList.html.twig',array('orgList' => $organizationList));
+            return $this->render('AcmebsceneBundle:Organization:organizationList.html.twig',array('orgList' => $organizationList));
         }
         else 
         {
-            return $this->render('AcmebsceneBundle:Default:organizationList.html.twig',array('orgList' => NULL,'errormessage' => "No organization list found"));
+            return $this->render('AcmebsceneBundle:Organization:organizationList.html.twig',array('orgList' => NULL,'errormessage' => "No organization list found"));
 
         }
     }
