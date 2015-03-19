@@ -12,7 +12,7 @@ acmebscene_homepage:
 
 acmebscene_dashboard:
     path:   /admin
-    defaults: { _controller: AcmebsceneBundle:Default:adminIndex }
+    defaults: { _controller: AcmebsceneBundle:Admin:index }
 
 acmebscene_adminOrganization:
     path:   /admin/organization
