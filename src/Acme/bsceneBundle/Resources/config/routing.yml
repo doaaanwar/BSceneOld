@@ -6,7 +6,10 @@ acmebscene_dashboard:
     path:   /admin
     defaults: { _controller: AcmebsceneBundle:Default:adminIndex }
 
-
+acmebscene_adminOrganization:
+    path:   /admin/organization
+    defaults: { _controller: AcmebsceneBundle:Organization:index }
+    
 acmebscene_login:
     path:   ''
     defaults: { _controller: AcmebsceneBundle:Default:login }
