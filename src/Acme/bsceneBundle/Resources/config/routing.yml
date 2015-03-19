@@ -17,10 +17,15 @@ acmebscene_homepage:
 acmebscene_dashboard:
     path:   /admin
     defaults: { _controller: AcmebsceneBundle:Admin:index }
+ 
+acmebscene_adminComment:
+    path:   /admin/comment
+    defaults: { _controller: AcmebsceneBundle:Comment:adminIndex}
 
 acmebscene_adminOrganization:
     path:   /admin/organization
     defaults: { _controller: AcmebsceneBundle:Organization:adminIndex}
+    
     
 acmebscene_login:
     path:   ''
