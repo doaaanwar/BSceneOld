@@ -20,7 +20,7 @@ class OrganizationController extends Controller
      * doaa el fayoumi -- added the new index for admin side
      * function that get the list of organization and go to the organization list page
      */
-    public function indexAction()
+    public function adminIndexAction()
     {
         $em = $this->getDoctrine()->getEntityManager();
         $repository = $em->getRepository('\Acme\bsceneBundle\Entity\Organization');
@@ -44,8 +44,8 @@ class OrganizationController extends Controller
      * Lists all Organization entities.
      *
      */
-    //doaa elfayoumi - remove the generated index
-   /* public function indexAction()
+    
+    public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -55,7 +55,7 @@ class OrganizationController extends Controller
             'entities' => $entities,
         ));
     }
-    */
+    
     
     /**
      * Creates a new Organization entity.

@@ -20,7 +20,7 @@ acmebscene_dashboard:
 
 acmebscene_adminOrganization:
     path:   /admin/organization
-    defaults: { _controller: AcmebsceneBundle:Organization:index }
+    defaults: { _controller: AcmebsceneBundle:Organization:adminIndex}
     
 acmebscene_login:
     path:   ''
