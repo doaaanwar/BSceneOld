@@ -15,10 +15,30 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
 
+
+
 class OrganizationController extends Controller
 {
+    /*
+     * function that get the list of organization and go to the organization list page
+     */
     public function indexAction()
     {
-        return $this->render('AcmebsceneBundle:Default:organizationList.html.twig');
+        $em = $this->getDoctrine()->getEntityManager();
+        $repository = $em->getRepository('\Acme\bsceneBundle\Entity\Organization');
+
+        
+        $organizationList = $repository->findAll();
+        if(count($organizationList) > 0)
+        {
+        
+            return $this->render('AcmebsceneBundle:Default:organizationList.html.twig',array('orgList' => $organizationList));
+        }
+        else 
+        {
+            return $this->render('AcmebsceneBundle:Default:organizationList.html.twig',array('orgList' => NULL,'errormessage' => "No organization list found"));
+
+        }
     }
+    
 }
