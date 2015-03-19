@@ -5,6 +5,7 @@ namespace Acme\bsceneBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\Security\Core\Encoder\BCryptPasswordEncoder;
 
 class DefaultController extends Controller
 {
@@ -23,14 +24,22 @@ class DefaultController extends Controller
     {
         
         if($request->getMethod()=='POST'){
-            $session = $request->getSession();
-            $session->clear();
+            //$session = $request->getSession();
+            //$session->clear();
             $username = $request->get('username');
             $password = $request->get('password');
             $em = $this->getDoctrine()->getEntityManager();
+            
+            
+           
+            
+            
             $repository = $em->getRepository('\Acme\bsceneBundle\Entity\Account');
-            $user = $repository->findOneBy(array('username'=>$username,'password'=>$password));
-            if($user)
+            
+
+            $user = $repository->findOneBy(array('username'=>$username));
+            $verified = password_verify($password, $user->getPassword());
+            if($user && $verified)
             {
                 $session = new Session();
                 $session->start();
