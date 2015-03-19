@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * OrganizationController.php
+ * controller used to manage operation on the organization object
+ * 
+ * Revision History:
+ *      19.03.2015: created, doaa elfayoumi
+ * 
+ */
+
 namespace Acme\bsceneBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
