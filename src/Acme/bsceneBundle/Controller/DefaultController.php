@@ -23,6 +23,8 @@ class DefaultController extends Controller
     {
         
         if($request->getMethod()=='POST'){
+            $session = $request->getSession();
+            $session->clear();
             $username = $request->get('username');
             $password = $request->get('password');
             $em = $this->getDoctrine()->getEntityManager();
