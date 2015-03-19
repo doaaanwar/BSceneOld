@@ -1,3 +1,7 @@
+acmebscene_account:
+    resource: "@AcmebsceneBundle/Resources/config/routing/account.yml"
+    prefix:   /account
+
 acmebscene_homepage:
     path:     /hello/{name}
     defaults: { _controller: AcmebsceneBundle:Default:index }
