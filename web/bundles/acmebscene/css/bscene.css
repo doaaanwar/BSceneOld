@@ -1,5 +1,8 @@
 /* source: http://www.alessioatzeni.com/blog/login-box-modal-dialog-window-with-css-and-jquery/ */
 /* Mask for background, by default is not display */
+body {margin-top: 5%;}
+
+
 #mask {
     display: none;
     background: #000;

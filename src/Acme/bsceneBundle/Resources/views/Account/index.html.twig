@@ -1,6 +1,15 @@
 {% extends '::base.html.twig' %}
 
-{% block body -%}
+{% block stylesheets %}	
+    <link href="{{ asset('bundles/acmebscene/css/account.css')}}" rel="stylesheet">
+{% endblock %}
+{% block nav %}
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+    
+{% block body %}
     <h1>Account list</h1>
 
     <table class="records_list">
