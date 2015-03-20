@@ -49,6 +49,11 @@ class DefaultController extends Controller
                     {
 
                         $session->set('admin','admin');
+                        $session->set('lastLogin',$user->getLastLogin());
+                        
+                        //TODO save the current time for the last login of the admin or do it on the logout
+                        
+                        
                     }
 
                      
