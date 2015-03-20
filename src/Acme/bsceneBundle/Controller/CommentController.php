@@ -19,9 +19,12 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 class CommentController extends Controller
 {
-    /*
-     * function that get the list of new comment given the last login of the admin
-     */
+   /**
+    * doaa elfayoumi
+    * function that get the list of new comment given the last login of the admin
+    * @param type $lastLogin
+    * @return type
+    */
     public function adminIndexAction($lastLogin)
     {
        

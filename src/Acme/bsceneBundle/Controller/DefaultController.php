@@ -9,15 +9,25 @@ use Symfony\Component\Security\Core\Encoder\BCryptPasswordEncoder;
 
 class DefaultController extends Controller
 {
+    /**
+     * 
+     * @param type $name
+     * @return type
+     */
     public function indexAction($name)
     {
         return $this->render('AcmebsceneBundle:Default:index.html.twig', array('name' => $name));
     }
     
-    
+    //TODO function to get the list of days with events
   
-    
-     public function loginAction(Request $request)
+    /**
+     * doaa elfayoumi
+     * function used for the login of member and admin 
+     * @param Request $request
+     * @return type
+     */
+    public function loginAction(Request $request)
     {
         
         if($request->getMethod()=='POST'){

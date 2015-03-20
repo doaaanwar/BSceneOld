@@ -14,11 +14,10 @@ use Acme\bsceneBundle\Form\OrganizationType;
  */
 class OrganizationController extends Controller
 {
-
-    
-    /*
+    /**
      * doaa el fayoumi -- added the new index for admin side
      * function that get the list of organization and go to the organization list page
+     * @return type
      */
     public function adminIndexAction()
     {
